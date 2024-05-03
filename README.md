@@ -5,8 +5,30 @@
     <title>Ulrik siger ikke nej, men tak for kage!</title>
 </head>
 <body>
-    <h1>Ulrik siger ikke nej, men tak for kage!</h1>
+    <!-- <h1>Ulrik siger ikke nej, men tak for kage!</h1> -->
     
+<script>
+        // JavaScript code to alternate between two text strings every 10th visit
+        document.addEventListener('DOMContentLoaded', function() {
+            var textElement = document.getElementById('text');
+            var text1 = 'Ulrik siger ikke nej, men tak for kage!';
+            var text2 = 'Ulrik siger er der mere slik?';
+            var visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
+
+            // Increment visit count and save to localStorage
+            visitCount++;
+            localStorage.setItem('visitCount', visitCount);
+
+            // Determine if it's the 10th visit
+            if (visitCount % 10 === 0) {
+                textElement.textContent = text2; // Display text2 on the 10th visit
+            } else {
+                textElement.textContent = text1; // Display text1 on other visits
+            }
+        });
+    </script>
+
+
 <head>
         <style>
         /* Style to resize the image */
