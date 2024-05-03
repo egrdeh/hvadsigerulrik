@@ -28,7 +28,7 @@
         });
     </script>
 
-
+<div id="text">Ulrik siger ikke nej, men tak for kage!</div>
 <head>
         <style>
         /* Style to resize the image */
