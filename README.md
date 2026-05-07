@@ -12,14 +12,27 @@
             var textElement = document.getElementById('text');
             var diceElement = document.getElementById('dice');
             var rollButton = document.getElementById('roll-button');
+            var orangeSceneElement = document.getElementById('orange-scene');
             var text1 = 'Ulrik siger ikke nej, men tak for kage!';
             var text2 = 'Ulrik siger er der mere slik?';
             var text3 = 'Skulle man mon k\u00F8be en ny motorcykel?';
+            var text4 = 'Andreas spiser æbler og piller appelsiner forkert';
             var diceFaces = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+
+            function showOrangeScene(show) {
+                orangeSceneElement.hidden = !show;
+            }
 
             function rollDice() {
                 var roll = Math.floor(Math.random() * 6) + 1;
                 diceElement.innerHTML = diceFaces[roll - 1];
+                showOrangeScene(false);
+
+                if (roll === 3) {
+                    textElement.textContent = text4;
+                    showOrangeScene(true);
+                    return;
+                }
 
                 if (roll === 6) {
                     textElement.textContent = text2;
@@ -50,6 +63,21 @@
             margin: 24px 0;
         }
 
+        #text {
+            font-size: 28px;
+            margin-top: 24px;
+        }
+
+        #orange-scene {
+            margin: 18px auto 10px;
+            max-width: 360px;
+        }
+
+        #orange-scene img {
+            width: min(100%, 320px);
+            height: auto;
+        }
+
         #dice {
             font-size: 96px;
             line-height: 1;
@@ -63,11 +91,14 @@
         }
 
         /* Style to resize the image */
-        img {
+        body > img {
             width: 40%; /* Set the width of the image to 40% of its original size */
             height: auto; /* Maintain aspect ratio */
         }
     </style>
+    <div id="orange-scene" hidden>
+        <img src="orange-unwrapping.svg" alt="Stick figure unwrapping an orange">
+    </div>
     <div class="dice-area">
         <div id="dice">&#9856;</div>
         <button id="roll-button" type="button">Roll dice</button>

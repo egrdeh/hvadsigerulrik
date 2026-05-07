@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+  <title id="title">Stick figure unwrapping an orange</title>
+  <desc id="desc">A simple animated stick figure peeling an orange the wrong way.</desc>
+  <rect width="320" height="240" fill="#fff8ef" />
+  <ellipse cx="160" cy="208" rx="90" ry="16" fill="#ead8bf" opacity="0.8" />
+
+  <g stroke="#1f1f1f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="116" cy="60" r="20" fill="#ffffff" />
+    <line x1="116" y1="82" x2="116" y2="134" />
+    <line x1="116" y1="96" x2="82" y2="118" />
+    <line x1="116" y1="96" x2="156" y2="110" />
+    <line x1="116" y1="134" x2="92" y2="182" />
+    <line x1="116" y1="134" x2="142" y2="182" />
+  </g>
+
+  <g transform="translate(0 0)">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 4 -2; 0 0" dur="1.2s" repeatCount="indefinite" />
+    <circle cx="164" cy="112" r="14" fill="#ff9f1c" stroke="#d97706" stroke-width="4" />
+    <path d="M154 106 C145 98, 139 102, 138 112 C139 126, 150 130, 162 124" fill="none" stroke="#ffcf70" stroke-width="5">
+      <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+        values="M154 106 C145 98, 139 102, 138 112 C139 126, 150 130, 162 124;
+                M154 106 C143 94, 133 98, 130 112 C132 130, 146 138, 164 132;
+                M154 106 C145 98, 139 102, 138 112 C139 126, 150 130, 162 124" />
+    </path>
+    <path d="M170 102 C182 88, 206 88, 212 110 C210 132, 188 146, 168 132" fill="none" stroke="#ffcf70" stroke-width="6">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" values="0 164 112;28 164 112;0 164 112" dur="1.2s" repeatCount="indefinite" />
+    </path>
+    <path d="M166 100 C188 78, 228 82, 238 114 C236 148, 202 168, 168 146" fill="none" stroke="#ffd98d" stroke-width="5">
+      <animate attributeName="opacity" values="0;0.9;0" dur="1.2s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" values="-8 164 112;18 164 112;34 164 112" dur="1.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <g stroke="#1f1f1f" stroke-width="6" stroke-linecap="round" fill="none">
+    <line x1="156" y1="110" x2="164" y2="112">
+      <animate attributeName="x2" values="160;164;160" dur="1.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="114;112;114" dur="1.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="82" y1="118" x2="72" y2="126" />
+  </g>
+</svg>
