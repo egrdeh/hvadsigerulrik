@@ -17,6 +17,7 @@
             var text2 = 'Ulrik siger er der mere slik?';
             var text3 = 'Skulle man mon k\u00F8be en ny motorcykel?';
             var text4 = 'Andreas spiser æbler og piller appelsiner forkert';
+            var text5 = 'Er du ikke en del af kageordningen?';
             var diceFaces = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
 
             function showOrangeScene(show) {
@@ -39,7 +40,13 @@
                     return;
                 }
 
-                if (Math.random() < 0.15) {
+                var specialRoll = Math.random();
+                if (specialRoll < 0.10) {
+                    textElement.textContent = text5;
+                    return;
+                }
+
+                if (specialRoll < 0.25) {
                     textElement.textContent = text3;
                     return;
                 }
